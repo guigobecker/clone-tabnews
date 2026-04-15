@@ -27,7 +27,7 @@ function Home() {
                         <span className="heart h6">❤</span>
                     </div>
                 <section className="card" aria-label="Mensagem de amor">
-                    <h1>Eu te amo meu amorzinho lindo do meu coração 💗💗💗</h1>
+                    <h1>eu te amo meu amorzinho lindo do meu coração 💗💗💗</h1>
                 </section>
             </main>
 
@@ -100,6 +100,8 @@ function Home() {
                     }
 
                 .card {
+                    --bubble-bg: rgba(255, 255, 255, 0.72);
+                    --bubble-stroke: rgba(255, 255, 255, 0.65);
                     position: relative;
                     isolation: isolate;
                     box-sizing: border-box;
@@ -107,12 +109,12 @@ function Home() {
                     border-radius: 28px;
                     padding: 18px 16px;
                     text-align: center;
-                    background: rgba(255, 255, 255, 0.72);
+                    background: var(--bubble-bg);
                     backdrop-filter: blur(8px);
                     -webkit-backdrop-filter: blur(8px);
                     box-shadow:
                         0 18px 35px rgba(202, 94, 130, 0.18),
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+                        inset 0 0 0 1px var(--bubble-stroke);
                     animation: fadeInUp 700ms ease-out both;
                 }
 
@@ -123,12 +125,14 @@ function Home() {
                     bottom: -14px;
                     width: 28px;
                     height: 20px;
-                    background: rgba(255, 255, 255, 0.72);
+                    background: var(--bubble-bg);
                     border-radius: 3px 0 14px 16px;
                     transform: skewX(-28deg);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
                     box-shadow:
                         7px 10px 16px rgba(202, 94, 130, 0.14),
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+                        inset 0 0 0 1px var(--bubble-stroke);
                     z-index: -1;
                 }
 
@@ -139,11 +143,13 @@ function Home() {
                     bottom: -24px;
                     width: 12px;
                     height: 12px;
-                    background: rgba(255, 255, 255, 0.72);
+                    background: var(--bubble-bg);
                     border-radius: 50%;
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
                     box-shadow:
                         5px 8px 14px rgba(202, 94, 130, 0.12),
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+                        inset 0 0 0 1px var(--bubble-stroke);
                     z-index: -1;
                 }
 
