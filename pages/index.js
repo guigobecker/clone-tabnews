@@ -27,8 +27,7 @@ function Home() {
                         <span className="heart h6">❤</span>
                     </div>
                 <section className="card" aria-label="Mensagem de amor">
-                    <h1>Eu te amo meu amorzinho lindo do meu coração</h1>
-                    <p className="signature">💗💗💗</p>
+                    <h1>Eu te amo meu amorzinho lindo do meu coração 💗💗💗</h1>
                 </section>
             </main>
 
@@ -44,7 +43,7 @@ function Home() {
                     min-height: 100vh;
                     display: grid;
                     place-items: center;
-                    padding: 20px;
+                    padding: 20px 28px;
                     background:
                         radial-gradient(circle at 20% 15%, #ffd9e6 0%, transparent 40%),
                         radial-gradient(circle at 80% 25%, #ffe9c8 0%, transparent 38%),
@@ -101,9 +100,12 @@ function Home() {
                     }
 
                 .card {
-                    width: min(100%, 420px);
+                    position: relative;
+                    isolation: isolate;
+                    box-sizing: border-box;
+                    width: min(88vw, 390px);
                     border-radius: 28px;
-                    padding: 28px 22px;
+                    padding: 18px 16px;
                     text-align: center;
                     background: rgba(255, 255, 255, 0.72);
                     backdrop-filter: blur(8px);
@@ -112,6 +114,37 @@ function Home() {
                         0 18px 35px rgba(202, 94, 130, 0.18),
                         inset 0 0 0 1px rgba(255, 255, 255, 0.65);
                     animation: fadeInUp 700ms ease-out both;
+                }
+
+                .card::before {
+                    content: "";
+                    position: absolute;
+                    left: 22px;
+                    bottom: -14px;
+                    width: 28px;
+                    height: 20px;
+                    background: rgba(255, 255, 255, 0.72);
+                    border-radius: 3px 0 14px 16px;
+                    transform: skewX(-28deg);
+                    box-shadow:
+                        7px 10px 16px rgba(202, 94, 130, 0.14),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+                    z-index: -1;
+                }
+
+                .card::after {
+                    content: "";
+                    position: absolute;
+                    left: 12px;
+                    bottom: -24px;
+                    width: 12px;
+                    height: 12px;
+                    background: rgba(255, 255, 255, 0.72);
+                    border-radius: 50%;
+                    box-shadow:
+                        5px 8px 14px rgba(202, 94, 130, 0.12),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+                    z-index: -1;
                 }
 
                 .eyebrow {
